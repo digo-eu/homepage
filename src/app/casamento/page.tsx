@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image";
 
 const urlList = [
 	"https://utfs.io/f/8af43d3e-891a-47f6-83f3-51d4d12de5f5-1k805c.2014-1.jpg",
@@ -18,16 +18,32 @@ const urlList = [
 
 const imageList = urlList.map(( url, index ) => ({ id: index + 1, url, }));
 
+async function Images() {
+	return (
+		<div className="flex flex-wrap justify-center gap-4 p-4">
+			{imageList.map((image) => (
+				<div key={image.id} className="flex h-48 w-48 flex-col">
+					<Image
+						src={image.url}
+						style={{ objectFit: "contain" }}
+						width={192}
+						height={192}
+						alt="Foto do casal"
+					/>
+					<div>Taís e Rodrigo</div>
+				</div>
+			))}
+		</div>
+	);
+}
+
 export default function CasamentoPage() {
 	return (
 		<main className="">
-		<div className="flex flex-wrap gap-4 h-full w-full">{
-			imageList.map((image) => (
-				<div key={image.id} className="w-full">
-				<img src={image.url} alt="Foto do casal" />
-				</div>
-			))}
-			</div>
+			<p className="text-8xl text-center text-red-600 hover:text-yellow-400 py-4 px-4">
+				Em construção!
+			</p>
+			<Images />
 		</main>
 	);
 }
