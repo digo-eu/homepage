@@ -30,7 +30,6 @@ async function Images() {
 						height={192}
 						alt="Foto do casal"
 					/>
-					<div>Taís e Rodrigo</div>
 				</div>
 			))}
 		</div>
