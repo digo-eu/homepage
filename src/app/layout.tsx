@@ -14,6 +14,7 @@ export default function RootLayout({children,}: {children: React.ReactNode;}) {
 		<body>
 		<ul data-orientation="horizontal" dir="ltr" className="w-screen sticky top-0 flex gap-12 px-4 py-4">
 		<span className="container flex text-4xl font-extrabold text-white sm:text-[3rem]">Rodrigo Andrade</span>
+		<li><a className="text-2xl font-bold" href="https://github.com/digo-eu">GitHub</a></li>
 		<li><a className="text-2xl font-bold" href="/geoserver">Geoserver</a></li>
 		<li><a className="text-2xl font-bold" href="/air">Go+HTMX</a></li>
 		<li><a className="text-2xl font-bold" href="/casamento">Casamento</a></li>
