@@ -33,19 +33,18 @@ const SideBar = ({
 }: Props ) => {
 
     return (
-        <div className={`h-screen sticky top-0 overflow-hidden translate-x-0 z-20 transition-all duration-300 ease-in-out ring-2 ring-white
-            ${collapsed ? 'w-[40px]' : 'w-[200px]'}
-            ${shown ? 'translate-x-full' : ''}
+        <div className={`h-screen sticky top-0 overflow-hidden fixed md:static md:translate-x-0 z-20 transition-all duration-300 ease-in-out md:ring-1 ring-white
+            ${collapsed ? '-translate-x-full w-[40px]' : 'w-[200px]'}
         `}>
             <div className="flex flex-col justify-between h-screen w-full">
-                <div className={`flex items-center transition-none p-4
+                <div className={`flex items-center transition-none px-4
                     ${collapsed ?'justify-center' :'justify-between'}
                 `}>
 
                     {!collapsed && <span className="font-bold whitespace-nowrap">Navegação</span>}
 
                     <button 
-                        className="grid place-content-center w-10 h-10 rounded-full stroke-white hover:stroke-black hover:bg-white transition-colors duration-300"
+                        className="max-md:hidden grid place-content-center rounded-full size-10 px-2 stroke-white hover:stroke-black hover:bg-white transition-colors duration-300"
                         onClick={() => setCollapsed(!collapsed)}
                     >
                         <MenuIcon />
@@ -58,10 +57,10 @@ const SideBar = ({
                                 
                                 <li key={index} className=""> 
                                     <Link href={item.href} className={`
-                                        flex gap-2 fill-white hover:fill-black py-2 font-medium hover:bg-white hover:text-black flex transition-all duration-300
+                                        flex gap-2 fill-white hover:fill-black p-2 font-medium hover:bg-white hover:text-black flex transition-all duration-300
                                         ${collapsed ?
-                                        "rounded-full p-2" :
-                                        "rounded-md p-2 w-300 h-10"
+                                        "rounded-full" :
+                                        "rounded-md w-300 h-10"
                                         }
                                     `}>
                                         {<span>{item.icon}</span>}
@@ -73,7 +72,7 @@ const SideBar = ({
                     </ul>
                 </nav>
                 <div className="grid place-content-stretch">
-                    <div className="flex gap-4 items-center p-1 h-11">
+                    <div className="flex gap-4 items-center px-1 py-10">
                         <Image src="https://utfs.io/f/d7585ec3-7641-46e1-a816-3ed4f8794d73-vjw3ro.jpg"
                             width={32} height={32}
                             alt="Avatar"

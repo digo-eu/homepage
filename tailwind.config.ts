@@ -11,6 +11,7 @@ export default {
       gridTemplateColumns: {
         sidebar: "200px auto",
         "sidebar-collapsed": "40px auto",
+        "sidebar-gone": "0px auto",
       },
     },
   },
