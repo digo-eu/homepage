@@ -9,7 +9,7 @@ const NavLayout = (props: PropsWithChildren) => {
     const [collapsed, setSidebarCollapsed] = useState(true);
 
     return (
-        <div className={`grid min-h-screen transition-[grid-template-columns] duration-300 ease-in-out
+            <div className={`grid h-full transition-[grid-template-columns] duration-300 ease-in-out
             ${collapsed ?
             "grid-cols-sidebar-gone md:grid-cols-sidebar-collapsed" :
             "grid-cols-sidebar"
@@ -20,12 +20,12 @@ const NavLayout = (props: PropsWithChildren) => {
                 setCollapsed={setSidebarCollapsed}
             />
             <div className="w-full">
-                <nav className="flex justify-between w-full top-0 sticky px-4 py-1.5 md:text-2xl font-bold">
+                <nav className="flex justify-between top-0 sticky text-xl px-4">
                     <button className="md:hidden grid place-content-center rounded-full size-10 px-2 stroke-white hover:stroke-black hover:bg-white transition-colors duration-300"
                         onClick={() => setSidebarCollapsed(!collapsed)}> <MenuIcon />
                     </button>
-                    <Link className="font-extrabold text-xl md:text-4xl" href="/">Rodrigo Andrade</Link>
-                    <div><s>Entrar</s></div>
+                    <Link className="font-extrabold md:text-4xl" href="/">Rodrigo Andrade</Link>
+                    <div className="md:text-2xl font-bold"><s>Entrar</s></div>
                 </nav>
                 {props.children}
             </div>

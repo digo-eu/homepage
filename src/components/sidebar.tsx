@@ -33,7 +33,7 @@ const SideBar = ({
 }: Props ) => {
 
     return (
-        <div className={`h-screen sticky top-0 overflow-hidden fixed md:static md:translate-x-0 z-20 transition-all duration-300 ease-in-out md:ring-1 ring-white
+        <div className={`h-screen sticky top-0 overflow-hidden fixed md:translate-x-0 z-20 transition-all duration-300 ease-in-out md:ring-1 ring-white
             ${collapsed ? '-translate-x-full w-[40px]' : 'w-[200px]'}
         `}>
             <div className="flex flex-col justify-between h-screen w-full">
