@@ -22,14 +22,12 @@ type Props = {
     collapsed: boolean;
     navItems?: NavItem[];
     setCollapsed(collapsed: boolean): void;
-    shown: boolean;
 };
 
 const SideBar = ({
     collapsed,
     navItems = defaultNavItems,
     setCollapsed,
-    shown,
 }: Props ) => {
 
     return (

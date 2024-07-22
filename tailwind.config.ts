@@ -13,6 +13,11 @@ export default {
         "sidebar-collapsed": "40px auto",
         "sidebar-gone": "0px auto",
       },
+      colors: {
+        'regal-blue': '#243c5a',
+        'clear-blue': '#204b60',
+        'deep-blue': '#1b1e2d',
+      },
     },
   },
   plugins: [],

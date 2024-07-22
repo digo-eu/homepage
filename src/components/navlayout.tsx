@@ -1,6 +1,5 @@
 'use client';
 import React, { PropsWithChildren, useState } from "react";
-import Link from "next/link";
 import SideBar from "../components/sidebar";
 import { MenuIcon } from "../components/assets";
 
@@ -24,8 +23,7 @@ const NavLayout = (props: PropsWithChildren) => {
                     <button className="md:hidden grid place-content-center rounded-full size-10 px-2 stroke-white hover:stroke-black hover:bg-white transition-colors duration-300"
                         onClick={() => setSidebarCollapsed(!collapsed)}> <MenuIcon />
                     </button>
-                    <Link className="font-extrabold md:text-4xl" href="/">Rodrigo Andrade</Link>
-                    <div className="md:text-2xl font-bold"><s>Entrar</s></div>
+                    <img className="md:hidden size-8" src="https://utfs.io/f/648b28b1-0df2-40e0-8854-c753d60edfdd-1l7cp.png" alt="Vlad is a cat" />
                 </nav>
                 {props.children}
             </div>
