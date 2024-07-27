@@ -16,11 +16,11 @@ type NavItem = {
     icon: React.ReactNode;
 };
 
-export const anos: GalleryItem[] = [
-    { name: "1", href: "https://utfs.io/f/8a844b55-fe73-4185-8cfb-d34934dc583d-lr1026.jpg", orientation: "vertical" },
+export const mozinhos: GalleryItem[] = [
+    { name: "1", href: "https://utfs.io/f/738ae7cd-0f38-4eb0-9aa6-452606c579e9-t4rcnp.JPG", orientation: "vertical" },
     { name: "2", href: "https://utfs.io/f/7c66e064-7da9-46ee-8cbe-154cb7b34f14-1x9crt.png", orientation: "vertical" },
     { name: "3", href: "https://utfs.io/f/2f09e551-890a-4d9b-a73c-d8091c936d3d-zcj4op.jpg", orientation: "vertical" },
-    { name: "4", href: "https://utfs.io/f/4c8e3fa8-b9fc-4074-a147-0671c6f54720-lr101e.jpg", orientation: "vertical" },
+    { name: "4", href: "https://utfs.io/f/02e78fa6-2c00-487b-aba6-d1336fb930c8-1xd7lk.HEIC", orientation: "vertical" },
     { name: "5", href: "https://utfs.io/f/5d02f5bd-e3b8-4a4c-ab9f-3bfe5951a0eb-jeriqf.jpg", orientation: "vertical" },
     { name: "6", href: "https://utfs.io/f/93d3c15c-0d64-4fd1-8e9e-d754ea278f34-243uhm.jpg", orientation: "vertical" },
     { name: "7", href: "https://utfs.io/f/71cda862-2ce4-46a3-8f64-8dc64149269b-bnmi20.jpg", orientation: "vertical" },
@@ -40,22 +40,22 @@ export const anos: GalleryItem[] = [
 ]
 
 const Projetos: NavItem[] = [
-    { name: "Site Pessoal", href: "/sobre", icon: <HomeIcon /> },
-    { name: "WebGIS", href: "/webgis", icon: <GitHubIcon /> },
-    { name: "Servidores", href: "/servidores", icon: <GeoServerIcon /> },
-    { name: "Eletrônicos", href: "/eletronicos", icon: <HtmxIcon /> },
-    { name: "Projeto Fíbula", href: "/tibia-3d", icon: <WeddingIcon /> },
-	{ name: "Frappé Bird", href: "/frappe-bird", icon: <WeddingIcon /> },
+    { name: "Site Pessoal", href: "/sobre", icon: <HomeIcon height={"50px"} width={"50px"}/> },
+    { name: "WebGIS", href: "/webgis", icon: <GeoServerIcon height={"50px"} width={"50px"}/> },
+    { name: "Servidores", href: "/servidores", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
+    { name: "Eletrônicos", href: "/eletronicos", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
+    { name: "Projeto Fíbula", href: "/tibia-3d", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
+	{ name: "Frappé Bird", href: "/frappe-bird", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
 ];
 
 export function FeaturedImageGallery() {
     const [active, setActive] = React.useState(
-        anos[0]?.href
+        mozinhos[0]?.href
     );
     
     return (
-      <div className="grid gap-2 p-4">
-        <div className="flex justify-center h-[600px]">
+      <div className="grid p-2 gap-2 rounded-md border border-white bg-black/[.5]">
+        <div className="flex justify-center h-[560px] gap-2">
           <img
             className="rounded-lg object-center object-contain"
             src={active}
@@ -63,12 +63,12 @@ export function FeaturedImageGallery() {
           />
         </div>
         <div className="grid grid-cols-10 gap-1">
-          {anos.map(({ href, name }, index) => (
+          {mozinhos.map(({ href, name }, index) => (
             <div key={index}>
               <img
                 onClick={() => setActive(href)}
                 src={href}
-                className="h-20 w-20 cursor-pointer rounded-lg object-cover object-center"
+                className="h-10 md:h-20 w-20 cursor-pointer rounded-lg object-cover object-center"
                 alt={name}
               />
             </div>
@@ -80,14 +80,14 @@ export function FeaturedImageGallery() {
 
 export function FeaturedProjectGallery() {
 	return(
-		<nav className="flex-grow">
-			<ul className="flex gap-2 items-stretch">
+		<nav>
+			<ul className="grid grid-cols-3 gap-2">
 				{Projetos.map((item, index) => {
 					return (
-						<li key={index} className=""> 
-							<Link href={item.href} className={'flex gap-2 fill-white hover:fill-black p-2 font-medium hover:bg-white hover:text-black flex transition-all duration-300'}>
-								{<span>{item.icon}</span>}
-								{<span>{item.name}</span>}
+						<li key={index} className="gap-2"> 
+							<Link href={item.href} className={'grid gap-2 w-[120px] fill-white hover:fill-black font-medium hover:bg-white hover:text-black transition-all duration-300'}>
+								{<span className="flex justify-center p-2">{item.icon}</span>}
+								{<span className="flex justify-center">{item.name}</span>}
 							</Link>
 						</li>
 					);
