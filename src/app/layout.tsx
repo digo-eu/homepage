@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 import "~/styles/globals.css";
 import NavLayout from "../components/navlayout";
 import { GeistSans } from "geist/font/sans";
+import { CSPostHogProvider } from './provider'
 
 export const metadata = {
     title: "Rodrigo Andrade",
@@ -12,13 +13,15 @@ export const metadata = {
 export default function Layout({children,}: {children: React.ReactNode;}) {
     return (
         <html lang="pt" className={`${GeistSans.variable}`}>
-            <body>
-                <NavLayout>
+            <CSPostHogProvider>
+                <body>
+                    <NavLayout>
 
-                    {children}
+                        {children}
 
-                </NavLayout>
-            </body>
+                    </NavLayout>
+                </body>
+            </CSPostHogProvider>
         </html>
     );
 }
