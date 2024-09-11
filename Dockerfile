@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 
-COPY package.json pnpm-lock.yaml
+COPY package.json pnpm-lock.yaml* ./
 
 RUN \
     yarn global add pnpm && pnpm i;
