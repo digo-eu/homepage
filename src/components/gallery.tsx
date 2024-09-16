@@ -44,8 +44,8 @@ const Projetos: NavItem[] = [
     { name: "WebGIS", href: "/webgis", icon: <GeoServerIcon height={"50px"} width={"50px"}/> },
     { name: "Servidores", href: "/servidores", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
     { name: "Eletrônicos", href: "/eletronicos", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
-    { name: "Projeto Fíbula", href: "/tibia-3d", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
-	{ name: "Frappé Bird", href: "/frappe-bird", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
+    { name: "Projeto Fíbula", href: "/fibula", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
+    { name: "Frappé Bird", href: "/frappe-bird", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
 ];
 
 export function FeaturedImageGallery() {
