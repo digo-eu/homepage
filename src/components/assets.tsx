@@ -91,7 +91,7 @@ export const WeddingIcon = ({
     ...props
 }: React.SVGProps<SVGSVGElement>) => (
     <svg className={className} fill={color} height={height} width={width} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
-        viewBox="0 0 512.001 512.001" xmlSpace="preserve">
+    viewBox="0 0 512.001 512.001" xmlSpace="preserve">
         <g>
             <g>
                 <circle cx="149.334" cy="234.667" r="35.556"/>

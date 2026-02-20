@@ -2,22 +2,15 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MenuIcon, HomeIcon, GitHubIcon, GeoServerIcon, HtmxIcon, WeddingIcon } from "../components/assets";
- 
+import { MenuIcon } from "../components/assets";
+import { Projetos } from "./gallery";
+
 type NavItem = {
     name: string;
     href: string;
     icon: React.ReactNode;
 };
 
-const defaultNavItems: NavItem[] = [
-    { name: "Home", href: "/", icon: <HomeIcon /> },
-    { name: "GitHub", href: "https://github.com/digo-eu", icon: <GitHubIcon /> },
-    { name: "GeoServer", href: "/geoserver", icon: <GeoServerIcon /> },
-    { name: "Go+HTMX", href: "/air", icon: <HtmxIcon /> },
-    { name: "Casamento", href: "/casamento", icon: <WeddingIcon /> },
-];
- 
 type Props = {
     collapsed: boolean;
     navItems?: NavItem[];
@@ -26,7 +19,7 @@ type Props = {
 
 const SideBar = ({
     collapsed,
-    navItems = defaultNavItems,
+    navItems = Projetos,
     setCollapsed,
 }: Props ) => {
 

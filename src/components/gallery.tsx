@@ -1,19 +1,18 @@
 'use client';
 import React, { useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { HomeIcon, GitHubIcon, GeoServerIcon, HtmxIcon, WeddingIcon } from "../components/assets";
-
-type GalleryItem = {
-    name: string;
-    href: string;
-    orientation: string;
-};
+import { HomeIcon, GitHubIcon, GeoServerIcon, HtmxIcon, WeddingIcon } from "./assets";
 
 type NavItem = {
     name: string;
     href: string;
     icon: React.ReactNode;
+};
+
+type GalleryItem = {
+    name: string;
+    href: string;
+    orientation: string;
 };
 
 export const mozinhos: GalleryItem[] = [
@@ -38,15 +37,6 @@ export const mozinhos: GalleryItem[] = [
     { name: "12", href: "https://utfs.io/f/6943c850-d612-434e-b80f-2d6016d07158-1x9z43.HEIC", orientation: "vertical" },
     { name: "13", href: "https://utfs.io/f/d9fcc441-1afb-4a38-8d48-7758d549000b-3km35b.jpg", orientation: "vertical" },
 ]
-
-const Projetos: NavItem[] = [
-    { name: "Site Pessoal", href: "/sobre", icon: <HomeIcon height={"50px"} width={"50px"}/> },
-    { name: "WebGIS", href: "/webgis", icon: <GeoServerIcon height={"50px"} width={"50px"}/> },
-    { name: "Servidores", href: "/servidores", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
-    { name: "Eletrônicos", href: "/eletronicos", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
-    { name: "Projeto Fíbula", href: "/fibula", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
-    { name: "Frappé Bird", href: "/frappe-bird", icon: <HtmxIcon height={"50px"} width={"50px"}/> },
-];
 
 export function FeaturedImageGallery() {
     const [active, setActive] = React.useState(
@@ -96,3 +86,15 @@ export function FeaturedProjectGallery() {
 		</nav>
 	);
 }
+
+export const Projetos: NavItem[] = [
+    { name: "Home", href: "/", icon: <HomeIcon /> },
+    { name: "Sobre este site", href: "/sobre", icon: <HomeIcon/> },
+    { name: "WebGIS", href: "/geoserver", icon: <GeoServerIcon/> },
+    { name: "Servidores", href: "/servidores", icon: <HtmxIcon/> },
+    { name: "Eletrônicos", href: "/eletronicos", icon: <HtmxIcon/> },
+    { name: "Projeto Fíbula", href: "/fibula", icon: <HtmxIcon/> },
+    { name: "Frappé Bird", href: "/frappe-bird", icon: <HtmxIcon/> },
+    { name: "Casamento", href: "/casamento", icon: <WeddingIcon /> },
+    { name: "GitHub", href: "https://github.com/digo-eu", icon: <GitHubIcon /> },
+];
