@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef } from "react";
 import Link from "next/link";
-import { HomeIcon, GitHubIcon, GeoServerIcon, HtmxIcon, WeddingIcon } from "./assets";
+import * as Assets from "./assets";
 
 type NavItem = {
     name: string;
@@ -88,13 +88,12 @@ export function FeaturedProjectGallery() {
 }
 
 export const Projetos: NavItem[] = [
-    { name: "Home", href: "/", icon: <HomeIcon /> },
-    { name: "Sobre este site", href: "/sobre", icon: <HomeIcon/> },
-    { name: "WebGIS", href: "/geoserver", icon: <GeoServerIcon/> },
-    { name: "Servidores", href: "/servidores", icon: <HtmxIcon/> },
-    { name: "Eletrônicos", href: "/eletronicos", icon: <HtmxIcon/> },
-    { name: "Projeto Fíbula", href: "/fibula", icon: <HtmxIcon/> },
-    { name: "Frappé Bird", href: "/frappe-bird", icon: <HtmxIcon/> },
-    { name: "Casamento", href: "/casamento", icon: <WeddingIcon /> },
-    { name: "GitHub", href: "https://github.com/digo-eu", icon: <GitHubIcon /> },
+    { name: "Home", href: "/", icon: <Assets.HomeIcon /> },
+    { name: "Sobre este site", href: "/sobre", icon: <Assets.InfoIcon /> },
+    { name: "WebGIS", href: "/geoserver", icon: <Assets.MapIcon/> },
+    { name: "Servidores", href: "/servidores", icon: <Assets.ServerIcon/> },
+    { name: "Projeto Fíbula", href: "/fibula", icon: <Assets.BoneIcon/> },
+    { name: "Frappé Bird", href: "/frappe-bird", icon: <Assets.CoffeeIcon/> },
+    { name: "Casamento", href: "/casamento", icon: <Assets.WeddingIcon/> },
+    { name: "GitHub", href: "https://github.com/digo-eu", icon: <Assets.GitHubIcon/> },
 ];

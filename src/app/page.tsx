@@ -1,7 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import { MenuIcon } from "~/components/assets";
-import { FeaturedProjectGallery } from "~/components/gallery";
 
 type NavItem = {
     name: string;
