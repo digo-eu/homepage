@@ -19,17 +19,11 @@ Me diverti bastante aprendendo os fundamentos de arquitetura e deploy de um back
 ### Meus planos para o futuro:   
 - Melhorias no visual e conteúdo das páginas no [homepage](https://github.com/digo-eu/homepage)   
 - Showcase de modelos de rede neural   
-- Servir jogos exportados pelo Godot   
-   
-### Obstáculos   
-Me distraí com a implementação de um painel lateral no site [digo-eu.com](A%20Grande%20S%C3%ADntese%5Cpages%5Cdigo-eu.com).   
-- Concluí e estou satisfeito com o estado atual, embora continue fazendo ajustes menores.   
-- Tomou um tempo considerável para uma parte pequena da funcionalidade desejada, ainda por cima de um detalhe não planejado. Embora eu acredite que essa experiência aprofundou meu conhecimento das ferramentas e vá melhorar significativamente o visual e a experiência do site, devo tomar isso como advertência sobre os perigos de iniciar atividades tangenciais a um projeto.   
    
 ### Melhorias realizadas:   
 Servir jogos exportados pelo Godot.
 - Pretendo expandir essa funcionalidade quando tiver jogos mais interessantes para mostrar.
-Implementar segurança TLS do Geoserver.
+Implementada segurança TLS do Geoserver.
 Nova homepage com React e stack T3.
 Página do casamento
 - Página criada em digo-eu.com/casamento
