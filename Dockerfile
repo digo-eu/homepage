@@ -23,8 +23,6 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# ENV NEXT_TELEMETRY_DISABLED=1
-
 RUN \
 if [ -f yarn.lock ]; then yarn run build; \
 elif [ -f package-lock.json ]; then npm run build; \
@@ -36,10 +34,14 @@ fi
 FROM base AS runner
 ARG NEXT_PUBLIC_POSTHOG_KEY
 ARG NEXT_PUBLIC_POSTHOG_HOST
+ARG GOOGLE_CLIENT_ID
+ARG REDIRECT_URI
 WORKDIR /app
 
 ENV NEXT_PUBLIC_POSTHOG_KEY=${NEXT_PUBLIC_POSTHOG_KEY}
 ENV NEXT_PUBLIC_POSTHOG_HOST=${NEXT_PUBLIC_POSTHOG_HOST}
+ENV GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+ENV REDIRECT_URI=${REDIRECT_URI}
 ENV NODE_ENV=production
 
 COPY --from=builder /app/next.config.js ./
