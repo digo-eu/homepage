@@ -1,11 +1,5 @@
 import React from "react";
 
-type NavItem = {
-    name: string;
-    href: string;
-    icon: React.ReactNode;
-};
-
 export default function HomePage() {
 	return (
 		<main className="">
